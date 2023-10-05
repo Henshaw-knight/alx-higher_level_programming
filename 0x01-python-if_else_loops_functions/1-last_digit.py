@@ -2,7 +2,7 @@
 import random
 number = random.randint(-10000, 10000)
 last_digit = int(str(number)[-1])
-string = f"The Last digit of {number} is {last_digit}"
+string = f"Last digit of {number} is {last_digit}"
 
 if (last_digit > 5):
     string += f" and is greater than 5"

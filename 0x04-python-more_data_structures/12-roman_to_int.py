@@ -12,9 +12,12 @@ def roman_to_int(roman_string):
     i = -1
 
     while (i > -len(roman_string)):
-        if (roman_string[i] != "I" and roman_string[i - 1] == "I"):
+        if (
+                roman_numerals[roman_string[i]] >
+                roman_numerals[roman_string[i - 1]]
+        ):
             integer_val += roman_numerals[roman_string[i]]
-            integer_val -= 2
+            integer_val -= 2 * roman_numerals[roman_string[i - 1]]
         else:
             integer_val += roman_numerals[roman_string[i]]
         i = i - 1

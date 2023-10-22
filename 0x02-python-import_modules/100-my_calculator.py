@@ -12,7 +12,7 @@ if __name__ == "__main__":
     op = sys.argv[2]
 
     if op not in operators:
-        print("Unknow operator. Available operators: +, -, * and /")
+        print("Unknown operator. Available operators: +, -, * and /")
         sys.exit(1)
 
     a = int(sys.argv[1])

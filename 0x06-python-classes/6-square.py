@@ -10,8 +10,8 @@ class Square:
             size (int, optional): The size of the square object
             position (:obj: 'tuple', optional): the position of the object
         """
-        self.__size = size
-        self.__position = position
+        self.size = size
+        self.position = position
 
     @property
     def size(self):
@@ -65,11 +65,11 @@ class Square:
         if self.__size == 0:
             print()
         else:
-            for i in range(self.__position[1]):
+            for i in range(self.position[1]):
                 print()
-            for row in range(0, self.__size):
-                for space in range(self.__position[0]):
+            for row in range(0, self.size):
+                for space in range(self.position[0]):
                     print(" ", end="")
-                for column in range(self.__size):
+                for column in range(self.size):
                     print("#", end="")
                 print()

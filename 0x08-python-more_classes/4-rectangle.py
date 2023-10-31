@@ -79,4 +79,4 @@ class Rectangle:
     def __repr__(self):
         """Method that returns a sting representation of the rectangle
         to be able to recreate a new instance"""
-        return "Rectangle ({:d}, {:d})".format(self.width, self.height)
+        return "Rectangle({:d}, {:d})".format(self.width, self.height)

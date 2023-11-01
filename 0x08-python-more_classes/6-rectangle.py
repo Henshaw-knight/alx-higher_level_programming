@@ -81,7 +81,7 @@ class Rectangle:
                 print(string + "#", end="")
             if i < self.height - 1:
                 print()
-            return string
+        return string
 
     def __repr__(self):
         """Method that returns a sting representation of the rectangle

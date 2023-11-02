@@ -122,5 +122,7 @@ class Rectangle:
         and width equal to size
         Args:
             size: the size of the object
+
+            width == height == size
         """
-        return cls(width=size, height=size)
+        return cls(size, size)

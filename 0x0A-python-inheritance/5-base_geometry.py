@@ -2,5 +2,6 @@
 """BaseGeometry class module"""
 
 
-class BaseGeometry(object):
+class BaseGeometry:
+    """An empty class"""
     pass

@@ -1,0 +1,23 @@
+=====================
+The ``MyList`` module
+=====================
+
+Importing function from the module
+----------------------------------
+>>> MyList = __import__('1-my_list').MyList
+
+
+Using ``printed_sorted`` function
+---------------------------------
+
+Initializing and printing sorted my_list
+>>> my_list = MyList()
+>>> my_list.append(1)
+>>> my_list.append(5)
+>>> my_list.append(10)
+>>> my_list.append(8)
+>>> my_list.append(13)
+>>> print(my_list)
+[1, 5, 10, 8, 13]
+>>> my_list.print_sorted()
+[1, 5, 8, 10, 13]

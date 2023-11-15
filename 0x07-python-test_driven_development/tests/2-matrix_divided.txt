@@ -97,3 +97,13 @@ TypeError: matrix_divided() missing 1 required positional argument: 'div'
 
 >>> matrix_divided(matrix, float('-inf'))
 [[-0.0, -0.0], [-0.0, -0.0]]
+
+>>> matrix_divided(matrix, "div as string")
+Traceback (most recent call last):
+...
+TypeError: div must be a number
+
+>>> matrix_divided(matrix, True)
+Traceback (most recent call last):
+...
+TypeError: div must be a number

@@ -1,0 +1,44 @@
+============================
+The ``3-say_my_name`` module
+============================
+
+Using ``say_my_name`` function
+------------------------------
+First import the ``say_my_name`` function from the ``3-say_my_name`` function module
+
+>>> say_my_name = __import__('3-say_my_name').say_my_name
+
+Now use it:
+>>> say_my_name("Henshaw", "Essien")
+My name is Henshaw Essien
+
+>>> say_my_name("Henshaw", 1)
+Traceback (most recent call last):
+...
+TypeError: last_name must be a string
+
+>>> say_my_name("James", False)
+Traceback (most recent call last):
+...
+TypeError: last_name must be a string
+
+>>> say_my_name([1, 2, 3], "Daniel")
+Traceback (most recent call last):
+...
+TypeError: first_name must be a string
+
+>>> say_my_name("Mimi") #doctest: +REPORT_NDIFF
+My name is Mimi 
+
+>>> say_my_name(first_name = "Peace") #doctest: +REPORT_NDIFF
+My name is Peace 
+
+>>> say_my_name(last_name = "Michael")
+Traceback (most recent call last):
+...
+TypeError: say_my_name() missing 1 required positional argument: 'first_name'
+
+>>> say_my_name()
+Traceback (most recent call last):
+...
+TypeError: say_my_name() missing 1 required positional argument: 'first_name'

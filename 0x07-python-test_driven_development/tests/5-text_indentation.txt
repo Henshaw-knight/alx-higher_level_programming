@@ -1,0 +1,66 @@
+==============================================
+The ``5-text_indentation.py`` module test file
+==============================================
+
+Using ``text_indentation`` function
+-----------------------------------
+First import the ``text_indentation`` function from the ``5-text_indentation.py`` module
+
+>>> text_indentation = __import__('5-text_indentation').text_indentation
+
+Now use it:
+>>> text_indentation("Henshaw")
+Henshaw
+
+>>> text_indentation("Henshaw J. Essien")
+Henshaw J.
+<BLANKLINE>
+Essien
+
+>>> text_indentation("""Today is a good day, right? \
+... Don't you agree?
+... """)
+Today is a good day, right?
+<BLANKLINE>
+Don't you agree?
+<BLANKLINE>
+<BLANKLINE>
+
+>>> text_indentation("These are what I like doing: \
+... 1. Coding \
+... 2. Playing chess \
+... 3. Watching football")
+These are what I like doing:
+<BLANKLINE>
+1.
+<BLANKLINE>
+Coding 2.
+<BLANKLINE>
+Playing chess 3.
+<BLANKLINE>
+Watching football
+
+>>> text_indentation(123)
+Traceback (most recent call last):
+...
+TypeError: text must be a string
+
+>>> text_indentation(12.34)
+Traceback (most recent call last):
+...
+TypeError: text must be a string
+
+>>> text_indentation(True)
+Traceback (most recent call last):
+...
+TypeError: text must be a string
+
+>>> text_indentation()
+Traceback (most recent call last):
+...
+TypeError: text_indentation() missing 1 required positional argument: 'text'
+
+>>> text_indentation("more", "arguments")
+Traceback (most recent call last):
+...
+TypeError: text_indentation() takes 1 positional argument but 2 were given

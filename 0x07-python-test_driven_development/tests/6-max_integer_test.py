@@ -9,11 +9,13 @@ class TestMaxInteger(unittest.TestCase):
     """Class for unit testing of 6-max_integer module"""
     def test_max_result(self):
         """ Test to get maximum result for positive and
-        negative lists of integers
+        negative lists of integers,
+        also checks for max number at the beginning, end and middle
         """
         self.assertEqual(max_integer([1, 2, 3, 4]), 4)
         self.assertEqual(max_integer([-1, -5, -10, -2]), -1)
         self.assertEqual(max_integer([-2, 4, -8, 15]), 15)
+        self.assertEqual(max_integer([3, 10, 20, 6, 9]), 20)
 
     def test_return_none(self):
         """Test to check that None is returned when no argument is given

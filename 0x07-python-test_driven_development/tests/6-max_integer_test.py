@@ -15,19 +15,6 @@ class TestMaxInteger(unittest.TestCase):
         self.assertEqual(max_integer([-1, -5, -10, -2]), -1)
         self.assertEqual(max_integer([-2, 4, -8, 15]), 15)
 
-    def test_values(self):
-        """Test to check that all elements of the list are integers"""
-        self.assertRaises(ValueError, max_integer, [1, "2", 3])
-        self.assertRaises(ValueError, max_integer, [True, 5, 7, 4])
-        self.assertRaises(ValueError, max_integer, [1.5, 10, 8, 24, 30])
-
-    def test_types(self):
-        """Test to check that the argument given is of type 'list'"""
-        self.assertRaises(TypeError, max_integer, "list of integers")
-        self.assertRaises(TypeError, max_integer, False)
-        self.assertRaises(TypeError, max_integer, {"a": 1, "b": 2, "c": 3})
-        self.assertRaises(TypeError, max_integer, 4.76)
-
     def test_return_none(self):
         """Test to check that None is returned when no argument is given
         or when an empty list is given

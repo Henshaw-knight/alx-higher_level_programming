@@ -101,8 +101,14 @@ class Rectangle(Base):
                 print("#", end="")
             print()
 
-    def update(self, *args):
-        """Assigns an argument to each attribute"""
+    def update(self, *args, **kwargs):
+        """Assigns an argument to each attribute
+        or assignes a key/value argument to attributes
+
+        Args:
+            args (list/tuple): for any number of positional arguments
+            kwargs (dict): for any number of keyword arguments
+        """
         if args is not None and len(args) > 0:
             for index, arg in enumerate(args):
                 if index == 0:
@@ -115,6 +121,20 @@ class Rectangle(Base):
                     self.x = arg
                 elif index == 4:
                     self.y = arg
+
+        else:
+            if kwargs is not None and len(kwargs) > 0:
+                for key, value in kwargs.items():
+                    if key == "id":
+                        self.id = value
+                    elif key == "width":
+                        self.width = value
+                    elif key == "height":
+                        self.height = value
+                    elif key == "x":
+                        self.x = value
+                    elif key == "y":
+                        self.y = value
 
     def __str__(self):
         """Defines the string representation of the Rectangle object"""

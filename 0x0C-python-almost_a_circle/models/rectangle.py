@@ -101,6 +101,21 @@ class Rectangle(Base):
                 print("#", end="")
             print()
 
+    def update(self, *args):
+        """Assigns an argument to each attribute"""
+        if args is not None and len(args) > 0:
+            for index, arg in enumerate(args):
+                if index == 0:
+                    self.id = arg
+                elif index == 1:
+                    self.width = arg
+                elif index == 2:
+                    self.height = arg
+                elif index == 3:
+                    self.x = arg
+                elif index == 4:
+                    self.y = arg
+
     def __str__(self):
         """Defines the string representation of the Rectangle object"""
         return "[Rectangle] ({}) {}/{} - {}/{}".format(

@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """Base class module"""
 import json
+import os
 
 
 class Base:
@@ -64,3 +65,20 @@ class Base:
             dummy = cls(1)
         dummy.update(**dictionary)
         return dummy
+
+    @classmethod
+    def load_from_file(cls):
+        """Returns a list of instances of a class"""
+        filename = f"{cls.__name__}.json"
+        instance_list = []
+
+        if not os.path.exists(filename):
+            return instance_list
+        with open(filename, "r") as f:
+            data_obj = f.read()
+
+        list_of_attr_dicts = cls.from_json_string(data_obj)
+
+        for attr_dict in list_of_attr_dicts:
+            instance_list.append(cls.create(**attr_dict))
+        return instance_list

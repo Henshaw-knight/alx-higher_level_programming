@@ -1,7 +1,7 @@
 #!/usr/bin/node
 const args = process.argv;
 let max = parseInt(process.argv[2]);
-let max2 = parseInt(process.argv[2]);
+let max2 = parseInt(process.argv[3]);
 
 if (args.length < 3 || !Number.isInteger(max)) {
   console.log(0);
@@ -10,7 +10,7 @@ if (args.length < 3 || !Number.isInteger(max)) {
 } else {
   for (let i = 2; i < args.length; i++) {
     const currentNum = parseInt(args[i]);
-    if (max < currentNum) {
+    if (currentNum > max) {
       max = currentNum;
     }
   }

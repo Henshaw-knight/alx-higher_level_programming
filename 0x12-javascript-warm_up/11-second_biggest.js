@@ -11,12 +11,11 @@ if (args.length < 3 || !Number.isInteger(max)) {
   for (let i = 2; i < args.length; i++) {
     const currentNum = parseInt(args[i]);
     if (currentNum > max) {
+      max2 = max;
       max = currentNum;
     }
-  }
-  for (let i = 2; i < args.length; i++) {
-    const currentNum = parseInt(args[i]);
-    if (currentNum > max2 && currentNum < max && currentNum !== max) {
+
+    if (currentNum > max2 && currentNum < max) {
       max2 = currentNum;
     }
   }

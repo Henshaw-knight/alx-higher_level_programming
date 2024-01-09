@@ -8,14 +8,16 @@ if (args.length < 3 || !Number.isInteger(max)) {
 } else if (args.length === 3) {
   console.log(0);
 } else {
-  for (let i = 2; i < (args.length - 1); i++) {
-    if (args[i] > max) {
-      max = args[i];
+  for (let i = 2; i < args.length; i++) {
+    const currentNum = parseInt(args[i]);
+    if (max < currentNum) {
+      max = currentNum;
     }
   }
-  for (let i = 2; i < (args.length - 1); i++) {
-    if (args[i] > max2 && args[i] < max && args[i] !== max) {
-      max2 = args[i];
+  for (let i = 2; i < args.length; i++) {
+    const currentNum = parseInt(args[i]);
+    if (currentNum > max2 && currentNum < max && currentNum !== max) {
+      max2 = currentNum;
     }
   }
   console.log(max2);

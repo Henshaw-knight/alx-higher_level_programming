@@ -23,7 +23,8 @@ if __name__ == "__main__":
         if (i != len(cities) - 1):
             print(cities[i][0], end=", ")
         else:
-            print(cities[i][0])
+            print(cities[i][0], end="")
+    print()
 
     cur.close()
     db.close()
